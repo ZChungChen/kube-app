@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: vprodb
-          image: zchung/vprofiledb:Tags
+          image: zchung/vprofiledb
 #          args:
 #            - "--ignore-db-dir=lost+found"
           volumeMounts:
@@ -36,7 +36,7 @@ spec:
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
-            volumeID: <volumeID>
+            volumeID: vol-01f35916cd3fe62b7
             fsType: ext4
       
       initContainers:
